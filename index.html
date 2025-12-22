@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tattoo Marrakech Ink - Studio professionnel de tatouage et piercing à Marrakech. Détatouage, Glaçage, Microblading, Microshading.">
+    <meta name="theme-color" content="#dc2626">
+    <title>Tattoo Marrakech Ink - Studio de Tatouage & Piercing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Tattoo Marrakech Ink</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#gallery">Tatouage</a></li>
+                <li><a href="#piercing">Piercing</a></li>
+                <li><a href="#detatouage">Détatouage</a></li>
+                <li><a href="#glacage">Glaçage</a></li>
+                <li><a href="#microblading">Microblading</a></li>
+                <li><a href="#microshading">Microshading</a></li>
+                <li><a href="#booking">Réservation</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tattoo Marrakech Ink</h1>
+            <p>Studio d'Art Corporel Professionnel</p>
+            <a href="#booking" class="cta-button">Réserver sur WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- HOME INTRO -->
+    <section id="home">
+        <h2>Bienvenue dans Notre Studio</h2>
+        <p>Nous sommes spécialisés dans les créations de Tatouages personnalisés, piercings, détatouage, microblading, microshading et glaçage. Nos artistes expérimentés transforment vos idées en œuvres uniques, dans un environnement sûr et créatif. Faites de chaque expérience un moment inoubliable !</p>
+    </section>
+
+    <!-- TATTOO GALLERY -->
+    <section id="gallery">
+        <h2>Tatouage</h2>
+        <p>Parcourez notre collection de créations personnalisées et de travaux antérieurs</p>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="blackwork">Blackwork</button>
+            <button class="filter-btn" data-filter="realism">Réalisme</button>
+            <button class="filter-btn" data-filter="minimal">Minimaliste</button>
+            <button class="filter-btn" data-filter="traditional">Traditionnel</button>
+            <button class="filter-btn" data-filter="custom">Personnalisé</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-card" data-category="realism">
+                <img src="https://i.imgur.com/oXV814k.jpeg" alt="Rose Petal Tattoo" loading="lazy">
+                <div class="gallery-info">
+                    <h3>Design Pétale de Rose</h3>
+                    <p>Tatouage réaliste de rose avec ombrage détaillé</p>
+                    <p class="price">À partir de 500 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="minimal">
+                <img src="https://i.imgur.com/JyIVY4F.jpeg" alt="Small Tattoo Design" loading="lazy">
+                <div class="gallery-info">
+                    <h3>Collection Minimaliste</h3>
+                    <p>Petits tatouages discrets et élégants</p>
+                    <p class="price">À partir de 500 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="minimal">
+                <img src="https://i.imgur.com/7Cobep0.jpeg" alt="Fine Line Tattoo" loading="lazy">
+                <div class="gallery-info">
+                    <h3>Art Ligne Fine</h3>
+                    <p>Tatouage en ligne fine avec précision parfaite</p>
+                    <p class="price">À partir de 550 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="blackwork">
+                <img src="https://i.imgur.com/ajNz2jn.jpeg" alt="Blackwork Tattoo" loading="lazy">
+                <div class="gallery-info">
+                    <h3>Design Blackwork</h3>
+                    <p>Tatouage noir intense avec contraste fort</p>
+                    <p class="price">À partir de 600 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="traditional">
+                <img src="https://i.imgur.com/M8L3fYO.jpeg" alt="Traditional Tattoo" loading="lazy">
+                <div class="gallery-info">
+                    <h3>Style Traditionnel</h3>
+                    <p>Tatouage classique avec couleurs vives</p>
+                    <p class="price">À partir de 700 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="custom">
+                <img src="https://i.imgur.com/eShvomq.jpeg" alt="Couple Tattoo" loading="lazy">
+                <div class="gallery-info">
+                    <h3>Design Couple Assorti</h3>
+                    <p>Tatouages complémentaires pour couples</p>
+                    <p class="price">À partir de 600 DH/paire</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIERCING SECTION -->
+    <section id="piercing">
+        <h2>Piercing</h2>
+        <p>Piercing corporel professionnel avec équipement stérilisé et bijoux premium</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/336FAKK.jpeg" alt="Piercing Nez">
+                <div class="gallery-info">
+                    <h3>Piercing Nez</h3>
+                    <p>Piercing nasal professionnel avec bijoux premium</p>
+                    <p class="price">À partir de 300 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/jnQbery.jpeg" alt="Piercing Oreille">
+                <div class="gallery-info">
+                    <h3>Piercing Oreille</h3>
+                    <p>Piercing d'oreille classique et hélix</p>
+                    <p class="price">À partir de 300 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/3psb5jO.jpeg" alt="Piercing Labret">
+                <div class="gallery-info">
+                    <h3>Piercing Labret</h3>
+                    <p>Piercing de lèvre inférieure avec finition soignée</p>
+                    <p class="price">À partir de 350 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/5nWQG9n.jpeg" alt="Piercing Nostril">
+                <div class="gallery-info">
+                    <h3>Piercing Nostril</h3>
+                    <p>Piercing de narine avec suivi post-soin</p>
+                    <p class="price">À partir de 320 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/vxP8JoP.jpeg" alt="Piercing Septum">
+                <div class="gallery-info">
+                    <h3>Piercing Septum</h3>
+                    <p>Piercing de septum nasal avec anneau</p>
+                    <p class="price">À partir de 380 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/QtdE3Jc.jpeg" alt="Piercing Cartilage">
+                <div class="gallery-info">
+                    <h3>Piercing Cartilage</h3>
+                    <p>Piercing de cartilage d'oreille multiple</p>
+                    <p class="price">À partir de 340 DH</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DÉTATOUAGE SECTION -->
+    <section id="detatouage">
+        <h2>Détatouage</h2>
+        <p>Élimination professionnelle de tatouages avec technologie laser avancée</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/pDarP8r.jpeg" alt="Détatouage Laser">
+                <div class="gallery-info">
+                    <h3>Détatouage Laser</h3>
+                    <p>Traitement laser Q-switched pour tatouages noirs</p>
+                    <p class="price">À partir de 300 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/a77W7fm.jpeg" alt="Détatouage Couleur">
+                <div class="gallery-info">
+                    <h3>Détatouage Couleur</h3>
+                    <p>Élimination de tatouages colorés avec laser multi-longueurs d'onde</p>
+                    <p class="price">À partir de 400 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/7dXjgSy.jpeg" alt="Détatouage Petite Zone">
+                <div class="gallery-info">
+                    <h3>Petite Zone</h3>
+                    <p>Traitement laser pour petits tatouages et retouches</p>
+                    <p class="price">À partir de 300 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/QrwBV7R.jpeg" alt="Détatouage Grande Zone">
+                <div class="gallery-info">
+                    <h3>Grande Zone</h3>
+                    <p>Élimination laser pour grands tatouages et manches</p>
+                    <p class="price">À partir de 600 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/oI1Loex.jpeg" alt="Détatouage Progressif">
+                <div class="gallery-info">
+                    <h3>Traitement Progressif</h3>
+                    <p>Séances multiples pour élimination complète et sécurisée</p>
+                    <p class="price">À partir de 350 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/aLhKioX.jpeg" alt="Détatouage Précision">
+                <div class="gallery-info">
+                    <h3>Détatouage Précision</h3>
+                    <p>Laser haute précision pour zones sensibles</p>
+                    <p class="price">À partir de 380 DH</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLAÇAGE SECTION -->
+    <section id="glacage">
+        <h2>Glaçage</h2>
+        <p>Traitement de glaçage dentaire pour un sourire éclatant</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/4rOLukR.jpeg" alt="Glaçage Complet">
+                <div class="gallery-info">
+                    <h3>Glaçage Complet</h3>
+                    <p>Traitement glaçage complet pour un sourire lumineux</p>
+                    <p class="price">À partir de 1200 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/Litbl92.jpeg" alt="Glaçage Premium">
+                <div class="gallery-info">
+                    <h3>Glaçage Premium</h3>
+                    <p>Glaçage haut de gamme avec finition cristalline</p>
+                    <p class="price">À partir de 1500 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/wdm0i12.jpeg" alt="Glaçage Express">
+                <div class="gallery-info">
+                    <h3>Glaçage Express</h3>
+                    <p>Traitement rapide pour résultat immédiat</p>
+                    <p class="price">À partir de 1200 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/OSGQrii.jpeg" alt="Glaçage Brillance">
+                <div class="gallery-info">
+                    <h3>Glaçage Brillance</h3>
+                    <p>Effet brillant longue durée pour dents éclatantes</p>
+                    <p class="price">À partir de 1300 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/dj3eUXO.jpeg" alt="Glaçage Naturel">
+                <div class="gallery-info">
+                    <h3>Glaçage Naturel</h3>
+                    <p>Finition naturelle pour sourire authentique</p>
+                    <p class="price">À partir de 1250 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/T7XgoMJ.jpeg" alt="Glaçage Éclatant">
+                <div class="gallery-info">
+                    <h3>Glaçage Éclatant</h3>
+                    <p>Glaçage ultra-blanc pour sourire hollywoodien</p>
+                    <p class="price">À partir de 1400 DH</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICROBLADING SECTION -->
+    <section id="microblading">
+        <h2>Microblading</h2>
+        <p>Technique de maquillage semi-permanent pour des sourcils parfaits</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/9x5cbzX.jpeg" alt="Microblading Classique">
+                <div class="gallery-info">
+                    <h3>Microblading Classique</h3>
+                    <p>Technique trait par trait pour sourcils naturels</p>
+                    <p class="price">À partir de 800 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/plOQXhE.jpeg" alt="Microblading Premium">
+                <div class="gallery-info">
+                    <h3>Microblading Premium</h3>
+                    <p>Service haut de gamme avec pigments supérieurs</p>
+                    <p class="price">À partir de 1000 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/YxERUMv.jpeg" alt="Microblading Naturel">
+                <div class="gallery-info">
+                    <h3>Microblading Naturel</h3>
+                    <p>Effet naturel avec poils ultra-réalistes</p>
+                    <p class="price">À partir de 850 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/ltd013Q.jpeg" alt="Microblading Défini">
+                <div class="gallery-info">
+                    <h3>Microblading Défini</h3>
+                    <p>Sourcils bien dessinés et structurés</p>
+                    <p class="price">À partir de 900 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/7PERIKP.jpeg" alt="Microblading Parfait">
+                <div class="gallery-info">
+                    <h3>Microblading Parfait</h3>
+                    <p>Résultat parfait avec retouche incluse</p>
+                    <p class="price">À partir de 950 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/YPUPLPv.png" alt="Microblading Complet">
+                <div class="gallery-info">
+                    <h3>Microblading Complet</h3>
+                    <p>Service complet avec design personnalisé</p>
+                    <p class="price">À partir de 1100 DH</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICROSHADING SECTION -->
+    <section id="microshading">
+        <h2>Microshading</h2>
+        <p>Technique de maquillage semi-permanent pour un effet poudré naturel</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/xAhIG45.jpeg" alt="Microshading Doux">
+                <div class="gallery-info">
+                    <h3>Microshading Doux</h3>
+                    <p>Effet poudré léger et naturel</p>
+                    <p class="price">À partir de 1000 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/SvfGfzQ.jpeg" alt="Microshading Ombré">
+                <div class="gallery-info">
+                    <h3>Microshading Ombré</h3>
+                    <p>Technique ombré pour effet dégradé parfait</p>
+                    <p class="price">À partir de 1200 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/6jsDAqH.jpeg" alt="Microshading Intense">
+                <div class="gallery-info">
+                    <h3>Microshading Intense</h3>
+                    <p>Résultat défini avec couleur intense</p>
+                    <p class="price">À partir de 1100 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/aAyauCj.jpeg" alt="Microshading Naturel">
+                <div class="gallery-info">
+                    <h3>Microshading Naturel</h3>
+                    <p>Sourcils naturels avec effet maquillé discret</p>
+                    <p class="price">À partir de 1050 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/O5VJVj3.jpeg" alt="Microshading Premium">
+                <div class="gallery-info">
+                    <h3>Microshading Premium</h3>
+                    <p>Service premium avec pigments de haute qualité</p>
+                    <p class="price">À partir de 1300 DH</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://i.imgur.com/8bXBbzd.jpeg" alt="Microshading Parfait">
+                <div class="gallery-info">
+                    <h3>Microshading Parfait</h3>
+                    <p>Résultat parfait avec suivi et retouche</p>
+                    <p class="price">À partir de 1250 DH</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking">
+        <h2>Réservez Votre Rendez-vous</h2>
+        <p>Remplissez le formulaire ci-dessous et nous vous contacterons sur WhatsApp pour confirmer votre réservation</p>
+
+        <form class="booking-form" id="bookingForm">
+            <div class="form-group">
+                <label for="name">Nom Complet *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Numéro de Téléphone (WhatsApp) *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Type de Service *</label>
+                <select id="service" name="service" required>
+                    <option value="">Sélectionnez un service</option>
+                    <option value="tattoo">Tatouage</option>
+                    <option value="piercing">Piercing</option>
+                    <option value="detatouage">Détatouage</option>
+                    <option value="microblading">Microblading </option>
+                    <option value="microshading">Microshading </option>
+            
+                    <option value="consultation">Consultation</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="details">Détails / Description</label>
+                <textarea id="details" name="details" rows="4" placeholder="Décrivez votre idée de tatouage ou l'emplacement du piercing..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="reference">Image de Référence (optionnel)</label>
+                <input type="file" id="reference" name="reference" accept="image/*" class="file-upload">
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer sur WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>À Propos de Notre Studio</h2>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Notre Histoire</h3>
+                <p>Établi en 2015, Tattoo Marrakech Ink est devenu l'un des studios de tatouage et de piercing les plus réputés de la ville. Notre équipe d'artistes primés apporte plus de 50 ans d'expérience combinée, se spécialisant dans divers styles, du traditionnel à l'art contemporain.</p>
+                <p>Nous croyons que chaque tatouage raconte une histoire, et nous sommes honorés de faire partie de la vôtre. Notre studio combine l'excellence artistique avec une atmosphère accueillante où chacun se sent à l'aise pour s'exprimer.</p>
+            </div>
+
+            <div class="about-text">
+                <h3>Hygiène & Sécurité</h3>
+                <p>Votre sécurité est notre priorité absolue. Nous maintenons les normes les plus élevées d'hygiène et de sécurité:</p>
+                <ul>
+                    <li>Tout l'équipement est stérilisé dans des autoclaves de qualité médicale</li>
+                    <li>Aiguilles à usage unique et fournitures jetables</li>
+                    <li>Artistes agréés et certifiés</li>
+                    <li>Inspections sanitaires régulières</li>
+                    <li>Encres et bijoux de qualité premium</li>
+                    <li>Instructions détaillées de soins après-tatouage fournies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contactez-Nous</h2>
+        <p>Nous serions ravis d'avoir de vos nouvelles! Contactez-nous via l'un des canaux ci-dessous.</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>WhatsApp</h3>
+                <p>Réponses rapides pour réservations</p>
+                <a href="https://wa.me/212630665940" target="_blank">+212 630-665940</a>
+            </div>
+
+            <div class="contact-card">
+                <h3>Instagram</h3>
+                <p>Suivez nos derniers travaux</p>
+                <a href="https://www.instagram.com/tatto_marrakech_ink?igsh=MTY2ZmN4cW1oMndvaQ%3D%3D&utm_source=qr" target="_blank">@tatto_marrakech_ink</a>
+            </div>
+
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p>Pour demandes détaillées</p>
+                <a href="mailto:Metraneanouar@gmail.com">Metraneanouar@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="map-placeholder">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3396.2597760598137!2d-8.019974715153923!3d31.65411188132562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDM5JzE0LjgiTiA4wrAwMScxOS44Ilc!5e0!3m2!1sar!2snl!4v1765991940350!5m2!1sar!2snl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Tattoo Marrakech Ink Studio. Tous droits réservés.</p>
+        <p>Sans rendez-vous bienvenu | Sur rendez-vous préféré</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
