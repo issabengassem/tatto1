@@ -115,34 +115,36 @@ nav {
 }
 
 .nav-container {
-    max-width: 75rem;
+    max-width: 88rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
     min-height: calc(var(--nav-height) - 1.7rem);
 }
 
 .logo {
-    flex: 1 1 auto;
-    min-width: 0;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    flex: 0 0 auto;
+    max-width: clamp(11rem, 18vw, 15rem);
+    font-size: clamp(1rem, 1.6vw, 1.35rem);
     font-weight: bold;
     color: var(--red);
     text-transform: uppercase;
-    letter-spacing: clamp(0.04rem, 0.4vw, 0.125rem);
+    letter-spacing: clamp(0.035rem, 0.28vw, 0.1rem);
     line-height: 1.2;
     margin-right: 0;
+    overflow-wrap: normal;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: clamp(0.75rem, 1.8vw, 2rem);
+    gap: clamp(0.45rem, 1vw, 1.1rem);
     align-items: center;
     justify-content: flex-end;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .nav-menu a {
@@ -151,8 +153,10 @@ nav {
     font-weight: 500;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.0625rem;
+    font-size: clamp(0.72rem, 0.85vw, 0.86rem);
+    letter-spacing: 0.04rem;
+    line-height: 1.2;
+    white-space: nowrap;
     padding: 0.5rem 0;
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -509,11 +513,12 @@ section p {
 /* ===== TATTOO GALLERY GRID ===== */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
     gap: clamp(1rem, 3vw, 2rem);
     margin-top: 2rem;
     opacity: 0;
     animation: fadeIn 0.6s ease-in forwards;
+    align-items: start;
 }
 
 @keyframes fadeIn {
@@ -949,7 +954,7 @@ textarea:focus-visible {
 }
 
 /* Enhanced touch targets for mobile */
-@media (max-width: 68.75rem) {
+@media (max-width: 75rem) {
     body.nav-open {
         overflow: hidden;
     }

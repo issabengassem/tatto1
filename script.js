@@ -104,7 +104,8 @@ document.querySelectorAll('img[loading="lazy"]').forEach(img => {
 
 // ===== GALLERY FILTER SYSTEM =====
 const filterButtons = document.querySelectorAll('.filter-btn');
-const galleryCards = document.querySelectorAll('.gallery-card');
+const galleryGrid = document.getElementById('galleryGrid');
+const galleryCards = galleryGrid ? galleryGrid.querySelectorAll('.gallery-card') : [];
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -122,10 +123,10 @@ filterButtons.forEach(button => {
             
             setTimeout(() => {
                 if (filterValue === 'all') {
-                    card.style.display = 'block';
+                    card.style.display = '';
                 } else {
                     if (card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'block';
+                        card.style.display = '';
                     } else {
                         card.style.display = 'none';
                     }
