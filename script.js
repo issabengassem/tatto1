@@ -15,21 +15,35 @@ function debounce(func, wait) {
 const mobileToggle = document.getElementById('mobileToggle');
 const navMenu = document.getElementById('navMenu');
 
+function closeMobileMenu() {
+    navMenu.classList.remove('active');
+    document.body.classList.remove('nav-open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+}
+
 mobileToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    const isOpen = navMenu.classList.toggle('active');
+    document.body.classList.toggle('nav-open', isOpen);
+    mobileToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
 // Close mobile menu when clicking on a nav link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+        closeMobileMenu();
     });
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
+        closeMobileMenu();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeMobileMenu();
     }
 });
 
