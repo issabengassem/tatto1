@@ -199,7 +199,7 @@ nav {
 .hero {
     min-height: calc(100svh - var(--nav-height));
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(220, 38, 38, 0.15)),
-                url('./Gemini_Generated_Image_r21dncr21dncr21d.png') center/cover;
+                url('./shado-tatto.png') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
