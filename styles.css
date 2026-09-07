@@ -199,7 +199,7 @@ nav {
 .hero {
     min-height: calc(100svh - var(--nav-height));
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(220, 38, 38, 0.15)),
-                url('./shady-tatto.jfif') center/cover;
+                url('./shady-tattoo.jfif') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
