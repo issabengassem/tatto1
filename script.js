@@ -157,7 +157,7 @@ bookingForm.addEventListener('submit', (e) => {
     const message = `Bonjour! Je voudrais réserver un rendez-vous.%0A%0ANom: ${name}%0ATéléphone: ${phone}%0AService: ${service}%0ADétails: ${details}`;
 
     // Replace with your actual WhatsApp number in international format (no + or spaces)
-    const whatsappNumber = '212632151409';
+    const whatsappNumber = '212694366308';
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
 
     // Open WhatsApp
