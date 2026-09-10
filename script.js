@@ -144,6 +144,7 @@ filterButtons.forEach(button => {
 
 // ===== BOOKING FORM WHATSAPP INTEGRATION =====
 const bookingForm = document.getElementById('bookingForm');
+const submitButton = bookingForm.querySelector('.submit-btn');
 
 bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -153,17 +154,29 @@ bookingForm.addEventListener('submit', (e) => {
     const service = document.getElementById('service').value;
     const details = document.getElementById('details').value;
 
-    // Create WhatsApp message
-    const message = `Bonjour! Je voudrais réserver un rendez-vous.%0A%0ANom: ${name}%0ATéléphone: ${phone}%0AService: ${service}%0ADétails: ${details}`;
+    // Create WhatsApp message ([WEB] marker identifies website customers for the automation)
+    const message = `[WEB] Bonjour! Je voudrais réserver un rendez-vous.\n\nNom: ${name}\nTéléphone: ${phone}\nService: ${service}\nDétails: ${details}`;
 
-    // Replace with your actual WhatsApp number in international format (no + or spaces)
+    // WhatsApp number in international format (no + or spaces)
     const whatsappNumber = '212694366308';
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-    // Open WhatsApp
+    // Disable button and show loading spinner
+    const originalText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.classList.add('loading');
+    submitButton.innerHTML = '<span class="spinner" aria-hidden="true"></span><span>Redirection vers WhatsApp...</span>';
+
+    // Open WhatsApp directly
     window.open(whatsappURL, '_blank');
 
     // Reset form
     bookingForm.reset();
-    alert('Redirection vers WhatsApp...');
+
+    // Restore button
+    setTimeout(() => {
+        submitButton.disabled = false;
+        submitButton.classList.remove('loading');
+        submitButton.textContent = originalText;
+    }, 3000);
 });

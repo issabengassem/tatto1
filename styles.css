@@ -366,6 +366,41 @@ nav {
     transform: translateY(0);
 }
 
+.submit-btn.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    cursor: wait;
+    opacity: 0.85;
+    transform: none;
+    pointer-events: none;
+}
+
+.submit-btn.loading:hover {
+    background-color: var(--red);
+    color: var(--white);
+    transform: none;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+}
+
+.spinner {
+    display: inline-block;
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* ===== SECTION STYLES ===== */
 section {
     width: min(100%, 75rem);
